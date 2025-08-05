@@ -29,6 +29,7 @@ class ImageCNN(nn.Module):
 
 
 model = ImageCNN()
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.load_state_dict(torch.load('model.pth', map_location=device))
 model.to(device)
